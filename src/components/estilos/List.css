@@ -1,0 +1,5 @@
+.listas {
+    color: tomato;
+    display: flex;
+    justify-content: space-between;
+}
