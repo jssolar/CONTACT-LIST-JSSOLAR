@@ -3,7 +3,7 @@
 import { AiFillEdit, AiFillDelete, AiOutlineMail } from 'react-icons/ai';
 import { BiSolidMap, BiSolidPhone } from 'react-icons/bi';
 
-const Card = () => {
+const Card = (props) => {
   return (
     <>
       <div className=" card container d-flex border rounded  tarjeta">
@@ -17,10 +17,10 @@ const Card = () => {
             </div>
             <div className="col-md-4 border">
               <div className="card-body">
-                <h5 className="card-title">nombre</h5>
-                <p className="card-text"><BiSolidMap /> Direcctión</p>
-                <p className="card-text"><BiSolidPhone /> Telefono</p>
-                <p className="card-text"><AiOutlineMail />  Email</p>
+                <h5 className="card-title">{props.nombre}</h5>
+                <p className="card-text"><BiSolidMap />{props.direccion}</p>
+                <p className="card-text"><BiSolidPhone />{props.Telefono}</p>
+                <p className="card-text"><AiOutlineMail />{props.Email}</p>
               </div>
             </div>
             <div className="editar-eliminar col-md-4  d-flex justify-content-evenly p-4">

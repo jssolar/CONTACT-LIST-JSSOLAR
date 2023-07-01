@@ -7,25 +7,25 @@ function NewContact(props) {
         <div className="row mb-3">
           <p4>Full Name</p4>
           <div className="col-sm-10">
-            <input type="text" className="form-control" id="inputPassword3" />
+            <input type="text" className="form-control" id="inputPassword" />
           </div>
         </div>
         <div className="row mb-3">
           <p4>Email</p4>
           <div className="col-sm-10">
-            <input type="email" className="form-control" id="inputEmail3" />
+            <input type="email" className="form-control" id="inputEmail" />
           </div>
         </div>
         <div className="row mb-3">
           <p4>Phone</p4>
           <div className="col-sm-10">
-            <input type="number" className="form-control" id="inputEmail3" />
+            <input type="number" className="form-control" id="inputEmail" />
           </div>
         </div>
         <div className="row mb-3">
           <p4>Adress</p4>
           <div className="col-sm-10">
-            <input type="text" className="form-control" id="inputEmail3" />
+            <input type="text" className="form-control" id="inputEmail" />
           </div>
         </div>
         <div className=" d-grid col-sm-10 gap-2">

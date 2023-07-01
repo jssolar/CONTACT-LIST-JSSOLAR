@@ -20,26 +20,29 @@ const List = () => {
     setNewTask(newTask.concat(agregarTarea)) 
     setAgregarTarea('')
   }
-
+const deleteTarea = (index) => {
+    const borrarTarea = [...newTask]
+    borrarTarea.splice(index, 1)
+    setNewTask(borrarTarea)
+}
   
 
   return (
-    <div className="container border m-5">
-      
-        <h1>Lista de tareas</h1>
-              
+    <div className="card border m-5">
+        <h3>Lista de tareas</h3>
           <div className="nueva-tarea card">
             <form  onSubmit={handleSubmit}>
                 <input 
                 type="text" 
                 value={agregarTarea}
-                onChange={handleChange} w-100/>
+                onChange={handleChange}/>
                 <button className="boton btn btn-primary" onClick={handleclick} type="submit">Ingresar tarea</button> 
-            <h4>No hay tareas</h4>
+            
        
             {<ul className="list-group list-group-flush">
                 {
-                  newTask.map((item, index) =>  (<li className="list-group-item listas" key={index}>{item} <RiDeleteBin2Fill  /></li>))
+                  newTask.length>0?
+                  newTask.map((item, index) =>  (<li className="list-group-item listas" key={index}>{item} <RiDeleteBin2Fill onClick = {(index) => deleteTarea()} /></li>)): <h4>No hay tareas</h4>
                 }
 
             </ul>
